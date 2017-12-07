@@ -7,6 +7,22 @@
 7-vanne
 8-énigme
 9-gif
+<<<<<<< HEAD
 10-avatar
+=======
+10-mini games
+>>>>>>> master
 11-LIEN VERS OFFRE DE JEU
-12-
+12-réduction
+13-Buggysoft
+14-Blague
+15-réduction
+16-mini games
+17-
+18-
+19-Fond d'écran
+20-réduction
+21-mini games
+22-
+23-
+24-mini jeu cool ubisoft
