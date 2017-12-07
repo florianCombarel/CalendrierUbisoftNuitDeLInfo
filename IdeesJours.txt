@@ -7,7 +7,11 @@
 7-vanne
 8-énigme
 9-gif
+<<<<<<< HEAD
+10-avatar
+=======
 10-mini games
+>>>>>>> master
 11-LIEN VERS OFFRE DE JEU
 12-réduction
 13-Buggysoft
