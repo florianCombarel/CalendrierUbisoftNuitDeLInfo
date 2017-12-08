@@ -5,7 +5,7 @@ window.onload = function() {
   for (var i = 0; i < 24; i++) {
     cases[i].addEventListener("click", checkDate);
     if(checkCookie(i)==true){
-      console.log("checked"+document.getElementById(i));
+      //console.log("checked"+document.getElementById(i));
       document.getElementById(i).src="./images/Ouvert.png";
     }
   }
@@ -16,7 +16,7 @@ window.onload = function() {
   for(let i = 0; i<24;i++){
     let monCheck = checkCookie(i);
       if(monCheck=="true"){
-        console.log(document.getElementById(i));
+        //console.log(document.getElementById(i));
         document.getElementById(i).src="./images/Ouvert.png";
       }
   }
@@ -26,19 +26,19 @@ window.onload = function() {
 
 function addCookie(j) {
   document.cookie = "dateOpen"+j+"= true";
-  console.log(j);
+  //console.log(j);
 }
 
 function checkDate(event){
-  console.log(event);
+  //console.log(event);
   let date = new Date();
   let month = date.getMonth();
   let jour = date.getDate();
-  console.log(event.target.id);
+  //console.log(event.target.id);
   if(month==11){
     if(event.target.id<=jour){
       if(checkCookie(event.target.id)==false){ //TODO
-        console.log("Check : "+event.target.id);
+        //console.log("Check : "+event.target.id);
         addCookie(event.target.id);
         event.target.src="./images/Ouvert.png"
       } else {
@@ -51,9 +51,9 @@ function checkDate(event){
 function getCookies() {
     //let name = dateJ + "=";
     let decodedCookie = decodeURIComponent(document.cookie);
-    console.log(decodedCookie);
+    //console.log(decodedCookie);
     let ca = decodedCookie.split(';');
-    console.log(ca);
+    //console.log(ca);
     for(let i = 0; i <ca.length; i++) {
         let c = ca[i];
         while (c.charAt(0) == ' ') {
@@ -83,7 +83,7 @@ function getCookie(dateJ) {
 
 function checkCookie(no) {
     var cookie = getCookie("dateOpen"+no);
-    console.log(cookie);
+    //console.log(cookie);
     if (cookie == "true") {
       //console.log("oui");
       return true;
