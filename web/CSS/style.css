@@ -31,5 +31,6 @@ table{
 }
 
 .case img:hover{
-	background-color:red;
+	cursor:pointer;
+	background-color:#000022;
 }
