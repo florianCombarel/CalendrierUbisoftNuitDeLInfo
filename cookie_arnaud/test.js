@@ -2,10 +2,10 @@
 window.onload = function() {
   let body = document.querySelector("body");
   document.querySelector(".test").addEventListener("click", checkDate);
-  document.querySelector(".return").addEventListener("click", getCookie);
+  document.querySelector(".return").addEventListener("click", getCookies);
 }
 //document.getElementById("test").addEventListener("click", checkDate);
-addCookie("1");
+
 
 function addCookie(j) {
   document.cookie = "dateOpen"+j+"= true";
@@ -13,15 +13,17 @@ function addCookie(j) {
 }
 
 function checkDate(event){
+  console.log(event);
   let date = new Date();
   let month = date.getMonth();
   let jour = date.getDate();
+  console.log(event.target.id);
   if(month==11){
-    if(event.id<=jour){
+    if(event.target.id<=jour){
       if(notOpen){ //TODO
-        addCookie(j);
+        addCookie(event.target.id);
         //TODO openCase
-      }
+    //  }
     }
   }
 
@@ -58,5 +60,15 @@ function getCookie(dateJ) {
         if (c.indexOf(name) == 0) {
             return c.substring(name.length, c.length);
         }
+    }
+    return "";
+}
+
+function checkCookie(no) {
+    var cookie = getCookie("username"+no);
+    if (cookie != "") {
+      return true;
+    } else {
+      return false;
     }
 }
