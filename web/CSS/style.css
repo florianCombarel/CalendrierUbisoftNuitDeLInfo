@@ -29,3 +29,8 @@ table{
   color:yellow;
   text-align: center;
 }
+
+.case img:hover{
+	cursor:pointer;
+	background-color:#000022;
+}
