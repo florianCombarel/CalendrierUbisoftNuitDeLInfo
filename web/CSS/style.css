@@ -29,3 +29,7 @@ table{
   color:yellow;
   text-align: center;
 }
+
+.case img:hover{
+	background-color:red;
+}
