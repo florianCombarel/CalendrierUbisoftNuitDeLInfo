@@ -45,6 +45,9 @@ function checkDate(event){
         event.target.src="./images/Ouvert.png"
       }
     }
+    else{
+      alert('Vous ne pouvez pas ouvrir ce cadeaux maintenant');
+    }
   }
 }
 
