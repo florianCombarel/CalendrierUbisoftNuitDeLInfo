@@ -1,0 +1,24 @@
+tbody{
+    background-image: url("../images/salon_noel.gif");
+    background-repeat: no-repeat;
+    background-size:75%;
+    background-position: center;
+    margin:0;
+  }
+
+@font-face {
+	font-family: "HACKED";
+	src: url('./Watch_Dogs.ttf');
+}
+
+h1{
+  text-align: center;
+  font-family: "HACKED";
+  font-size: 60px;
+}
+
+p{
+  font-size: :50px;
+  text-align: center;
+  font-family: "HACKED";
+}
