@@ -37,7 +37,7 @@ function checkDate(event){
   //console.log(event.target.id);
   if(month==11){
     if(event.target.id<=jour){
-      if(checkCookie(event.target.id)==false){ 
+      if(checkCookie(event.target.id)==false){
         faireAction(event.target.id);
         addCookie(event.target.id);
         event.target.src="./images/Ouvert.png"
