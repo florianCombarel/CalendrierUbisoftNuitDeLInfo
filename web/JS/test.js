@@ -4,16 +4,20 @@ window.onload = function() {
   let cases =document.querySelectorAll(".case");
   for (var i = 0; i < 24; i++) {
     cases[i].addEventListener("click", checkDate);
+    if(checkCookie(i)==true){
+      console.log("checked"+document.getElementById(i));
+      document.getElementById(i).src="./images/Ouvert.png";
+    }
   }
-  cases[1].addEventListener("click", checkDate);
   //for(let currentCase in cases) {
     //currentCase.on("click", checkDate);
 //  }
   document.querySelector(".return").addEventListener("click", getCookies);
-  for(let i = 1; i<25;i++){
+  for(let i = 0; i<24;i++){
     let monCheck = checkCookie(i);
       if(monCheck=="true"){
-        //TODO put gif open
+        console.log(document.getElementById(i));
+        document.getElementById(i).src="./images/Ouvert.png";
       }
   }
 }
@@ -30,12 +34,15 @@ function checkDate(event){
   let date = new Date();
   let month = date.getMonth();
   let jour = date.getDate();
-  console.log(event.target);
+  console.log(event.target.id);
   if(month==11){
     if(event.target.id<=jour){
       if(checkCookie(event.target.id)==false){ //TODO
         console.log("Check : "+event.target.id);
         addCookie(event.target.id);
+        event.target.src="./images/Ouvert.png"
+      } else {
+        event.target.src="./images/Ouvert.png"
       }
     }
   }
@@ -71,12 +78,12 @@ function getCookie(dateJ) {
             return c.substring(name.length, c.length);
         }
     }
-    return "";
+    return "false";
 }
 
 function checkCookie(no) {
     var cookie = getCookie("dateOpen"+no);
-
+    console.log(cookie);
     if (cookie == "true") {
       //console.log("oui");
       return true;
